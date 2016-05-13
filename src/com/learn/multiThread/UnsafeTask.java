@@ -12,6 +12,8 @@ public class UnsafeTask implements Runnable {
 		System.out.printf("Starting Thread:%s: %s\n",Thread.currentThread().getId(),startDate);
 		try {
 			TimeUnit.SECONDS.sleep((int)Math.rint(Math.random()));
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
 
